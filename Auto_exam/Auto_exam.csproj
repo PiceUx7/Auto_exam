@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22CB27FB-A128-41AE-A662-9E95D34FB60C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Auto_exam</RootNamespace>
+    <AssemblyName>Auto_exam</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="auto_examDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>auto_examDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cars_part_shop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cars_part_shop.Designer.cs">
+      <DependentUpon>Cars_part_shop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Choose_client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Choose_client.Designer.cs">
+      <DependentUpon>Choose_client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Choose_model.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Choose_model.Designer.cs">
+      <DependentUpon>Choose_model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cars_part_shop.resx">
+      <DependentUpon>Cars_part_shop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Choose_client.resx">
+      <DependentUpon>Choose_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Choose_model.resx">
+      <DependentUpon>Choose_model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="auto_examDataSet1.xsc">
+      <DependentUpon>auto_examDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="auto_examDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>auto_examDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="auto_examDataSet1.xss">
+      <DependentUpon>auto_examDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\209.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_user_male_172625.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_key-password-passcode-access_2205205.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_CabrioletRed_22989.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bmw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lada2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mercedes-benz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_male3_403019.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
